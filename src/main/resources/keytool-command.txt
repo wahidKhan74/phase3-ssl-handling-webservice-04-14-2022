@@ -1,0 +1,5 @@
+#old -keystore type
+keytool -genkey -alias ssl-server -keyalg RSA -keysize 2048 -validity 700 -keypass sslserver -storepass sslserver -keystore ssl-server.jks
+
+# new keystore type
+keytool -genkey -alias ssl-server -keyalg RSA -storetype PKCS12 -keysize 2048 -validity 365 -keypass sslserver -storepass sslserver -keystore ssl-server.p12
